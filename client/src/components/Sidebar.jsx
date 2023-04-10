@@ -139,11 +139,10 @@ const Sidebar = ({
                       >
                         {icon}
                       </ListItemIcon>
-                      <ListItemText primary={text}>
-                        {active === lcText && (
-                          <ChevronRightOutlined sx={{ ml: "auto" }} />
-                        )}
-                      </ListItemText>
+                      <ListItemText primary={text} />
+                      {active === lcText && (
+                        <ChevronRightOutlined sx={{ ml: "auto" }} />
+                      )}
                     </ListItemButton>
                   </ListItem>
                 );
@@ -166,14 +165,14 @@ const Sidebar = ({
                 <Typography
                   fontWeight="bold"
                   fontSize="0.9rem"
-                  SX={{ color: theme.palette.secondary[100] }}
+                  sx={{ color: theme.palette.secondary[100] }}
                 >
                   {user.name}
                 </Typography>
 
                 <Typography
                   fontSize="0.8rem"
-                  SX={{ color: theme.palette.secondary[200] }}
+                  sx={{ color: theme.palette.secondary[200] }}
                 >
                   {user.occupation}
                 </Typography>
